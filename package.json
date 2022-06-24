@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Test project for frontend developer",
   "scripts": {
-    
+    "build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
