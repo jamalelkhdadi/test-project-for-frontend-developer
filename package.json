@@ -3,15 +3,16 @@
   "version": "0.0.4",
   "description": "Test project for frontend developer",
   "scripts": {
-    "build": "npm run build",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "bootstrap": "^5.1.3"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0",
+    "del": "5.1.0",
+    "gulp": "4.0.2",
+    "gulp-cli": "2.2.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-prettify": "^0.0.1",

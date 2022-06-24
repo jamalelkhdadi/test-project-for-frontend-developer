@@ -54,7 +54,7 @@ gulp.task('font', () => {
 	       	.pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('default', gulp.series('templates', 'build-css', 'bootstrap-css', 'bootstrap-js', 'img', 'svg', 'font'));
+gulp.task('build', gulp.series('templates', 'build-css', 'bootstrap-css', 'bootstrap-js', 'img', 'svg', 'font'));
 
 
 
