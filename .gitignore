@@ -2,7 +2,7 @@
 #dist
 package-lock.json
 git.sh
-sass
+vanilla
 
 # Logs
 logs

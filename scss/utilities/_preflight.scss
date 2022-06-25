@@ -1,0 +1,39 @@
+/*
+  Preflight
+ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// default margin are removed
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+// heading are unstyled
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+// list are unstyled
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

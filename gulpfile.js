@@ -3,11 +3,18 @@ const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const prettify = require('gulp-html-prettify');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const svgo = require('gulp-svgo');
 const htmlmin = require('gulp-htmlmin');
 
+
+
+gulp.task('scss', () => {
+    return gulp.src('scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./dist/css/'));
+});
 
 // prettify html files
 gulp.task('templates', () => {
@@ -18,19 +25,19 @@ gulp.task('templates', () => {
 
 // Concat and minify CSS files
 gulp.task('build-css', () => {
-    return gulp.src('src/css/*.css')
-    .pipe(concat('app.min.css'))
+    return gulp.src('src/css/main.css')
+    //.pipe(concat('main.css'))
     .pipe(cleanCss())
     .pipe(gulp.dest('dist/css'));
 });
 
 // copy bootstrap from node_modules
 gulp.task('bootstrap-css', () => {
-    return gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    return gulp.src('src/css/bootstrap.min.css')
         .pipe(gulp.dest('dist/css'));
 });
 gulp.task('bootstrap-js', () => {
-    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    return gulp.src('src/js/bootstrap.bundle.min.js')
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -45,7 +52,7 @@ gulp.task('img', () => {
 gulp.task('svg', () => {
     return gulp.src('src/img/*.svg')
         .pipe(svgo())
-        .pipe(gulp.dest('dist/svg'));
+        .pipe(gulp.dest('dist/img'));
 });
 
 // fonts
@@ -54,7 +61,7 @@ gulp.task('font', () => {
 	       	.pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('build', gulp.series('templates', 'build-css', 'bootstrap-css', 'bootstrap-js', 'img', 'svg', 'font'));
+gulp.task('build', gulp.series('scss', 'templates', 'build-css', 'bootstrap-css', 'bootstrap-js', 'img', 'svg', 'font'));
 
 
 

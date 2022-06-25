@@ -1,0 +1,51 @@
+@import "../abstracts/abstracts";
+
+// BASE STYLES
+@import "preflight";
+
+// LAYOUT
+@import "display";
+@import "float";
+@import "objectFit";
+@import "objectPosition";
+@import "overflow";
+@import "position";
+@import "inset";
+@import "visibility";
+@import "zIndex";
+
+// BACKGROUND
+@import "backgroundColor";
+
+// BORDER
+@import "borderRadius";
+
+// FLEX BOX
+@import "flexDirection";
+@import "flexWrap";
+@import "alignItems";
+@import "alignContent";
+@import "alignSelf";
+@import "justifyContent";
+@import "flex";
+@import "flexGrow";
+@import "flexShrink";
+@import "order";
+
+// SPACING
+@import "padding";
+@import "margin";
+
+// SIZING
+@import "width";
+@import "minWidth";
+@import "maxWidth";
+@import "height";
+@import "minHeight";
+@import "maxHeight";
+
+// INTERACTIVITY
+@import "appearance";
+@import "outline";
+@import "pointerEvents";
+@import "resize";
