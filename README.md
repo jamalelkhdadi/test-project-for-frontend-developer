@@ -24,5 +24,5 @@ https://ehyaware.herokuapp.com
 ## Build
 
 ```
-gulp
+gulp build
 ```
