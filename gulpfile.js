@@ -3,7 +3,7 @@ const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const prettify = require('gulp-html-prettify');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const svgo = require('gulp-svgo');
 const htmlmin = require('gulp-htmlmin');
@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('scss', () => {
     return gulp.src('scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css/'));
+        .pipe(gulp.dest('./src/css/'));
 });
 
 // prettify html files
