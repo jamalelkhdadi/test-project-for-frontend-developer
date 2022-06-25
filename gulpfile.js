@@ -13,7 +13,7 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('scss', () => {
     return gulp.src('scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./scss/build/'));
 });
 
 // prettify html files
@@ -25,7 +25,8 @@ gulp.task('templates', () => {
 
 // Concat and minify CSS files
 gulp.task('build-css', () => {
-    return gulp.src('src/css/*.css')
+    return gulp.src(['scss/build/*.css', 
+                     'scss/build/**/*.css'])
     .pipe(concat('main.css'))
     .pipe(cleanCss())
     .pipe(gulp.dest('dist/css'));
