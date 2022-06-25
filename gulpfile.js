@@ -11,7 +11,8 @@ const htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('scss', () => {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('src/scss/main.scss')
+        //gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/scss/build/'));
 });

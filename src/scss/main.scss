@@ -6,7 +6,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
 }
 a {
     text-decoration: none;
@@ -16,6 +15,6 @@ a {
 }
 
 @import "style";
-//@import "utilities/utilities";
-//@import "components/components";
-//@import "theme/theme";
+@import "utilities/utilities";
+@import "components/components";
+@import "theme/theme";
