@@ -1,0 +1,1383 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+@import "../fonts/fonts.css";
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+body.landing .section-desc {
+  font-size: 18px;
+  line-height: 1.78;
+  color: #5a7184;
+}
+body.landing .section-title {
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 2px;
+  color: #5a7184;
+}
+body.landing .tagline {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  color: #183b56;
+}
+
+header.landing .hero {
+  padding-top: 68px;
+}
+header.landing .hero .hero-title {
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 1.21;
+  letter-spacing: 0.2px;
+  color: #183b56;
+}
+header.landing .hero .section-desc {
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+header.landing .hero .btn-container {
+  display: flex;
+  gap: 30px;
+}
+header.landing .hero a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 32px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.landing-partner {
+  padding: 100px 0;
+}
+.landing-partner .partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 104px;
+  margin-bottom: 100px;
+}
+.landing-partner img {
+  width: 116px;
+}
+.landing-partner .dots {
+  height: 62px;
+  background-image: url("../img/dots.svg");
+}
+
+.landing-collab {
+  padding-bottom: 120px;
+}
+.landing-collab .tagline {
+  margin-top: 28px;
+  margin-bottom: 15px;
+}
+.landing-collab .section-desc {
+  width: 384px;
+  margin-bottom: 34px;
+}
+.landing-collab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 56px;
+  margin: auto;
+  border-radius: 12px;
+  background-color: #1565d8;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.landing-collab img.image {
+  width: 682px;
+  padding: 40px;
+  padding-right: 44px;
+  padding-left: 36px;
+}
+.landing-collab div.image img {
+  height: 644px;
+  object-fit: cover;
+}
+.landing-collab .column-gap {
+  column-gap: 45px;
+}
+.landing-collab .gap {
+  gap: 50px;
+}
+.landing-collab .xl-w-544.gap {
+  gap: 33px;
+}
+.landing-collab .title {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  color: #183b56;
+}
+.landing-collab .desc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #5a7184;
+}
+.landing-collab .collab-card {
+  width: 350px;
+  height: 262px;
+  padding-top: 30px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.landing-collab .collab-card .title {
+  margin-top: 26px;
+  margin-bottom: 16px;
+}
+
+.landing-review {
+  background-color: #183b56;
+  margin: 0 100px;
+  padding-top: 40px;
+  height: 378px;
+  border-radius: 16px;
+}
+.landing-review .name {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+.landing-review .job {
+  font-size: 18px;
+  color: #ffffff;
+}
+.landing-review .review {
+  font-size: 28px;
+  line-height: 1.71;
+  letter-spacing: 0.19px;
+  color: #ffffff;
+}
+.landing-review img {
+  width: unset !important;
+  margin-right: 76px;
+  background-image: url(../img/shape-1.svg);
+  background-repeat: no-repeat;
+  background-size: 109%;
+  background-position: center;
+}
+.landing-review .owl-dots {
+  position: absolute;
+  top: 44px;
+  right: 11px;
+  line-height: 0;
+}
+.landing-review .owl-dots .owl-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin: 0 6px;
+}
+.landing-review .owl-dots .owl-dot.active {
+  background-color: white;
+}
+.landing-review .btn-container {
+  top: 306px;
+  left: 460px;
+  z-index: 2;
+}
+.landing-review .btn-container a {
+  box-shadow: 0 28px 32px 0 rgba(0, 0, 0, 0.06);
+  color: #959ead;
+}
+.landing-review .btn-container a:hover {
+  color: #183b56;
+  cursor: pointer;
+}
+.landing-review .column-gap {
+  column-gap: 20px;
+}
+
+.landing-integration {
+  background-image: url("../img/bg-left.svg"), url("../img/bg-right.svg");
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  padding-top: 84px;
+  padding-bottom: 66px;
+  margin: 100px;
+  margin-top: 212px;
+  margin-bottom: 120px;
+}
+.landing-integration .tagline {
+  margin: 24px 0;
+}
+.landing-integration a {
+  font-size: 18px;
+}
+
+.landing-pricing {
+  height: 902px;
+  background-color: rgba(179, 186, 197, 0.1);
+  padding-top: 80px;
+}
+.landing-pricing .text-container {
+  width: 610px;
+}
+.landing-pricing .tagline {
+  margin: 24px 0;
+}
+.landing-pricing .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.landing-pricing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.landing-pricing .switch input:checked + .slider {
+  background-color: #ccc;
+}
+.landing-pricing .switch input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+.landing-pricing .switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.landing-pricing .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #faad13;
+  border-radius: 18px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.landing-pricing .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.landing-pricing .title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  color: #183b56;
+  margin-bottom: 8px;
+}
+.landing-pricing .desc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #5a7184;
+}
+.landing-pricing .cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.landing-pricing .cards .pricing-card:last-child {
+  box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+}
+.landing-pricing .pricing-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 22px 50px;
+}
+
+.landing-download {
+  margin-top: 120px;
+}
+.landing-download .container {
+  border-top: solid 1px #e3e7ed;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.landing-download .tagline {
+  font-size: 40px !important;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.landing-download .download-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  height: 345px;
+  background-color: rgba(54, 179, 126, 0.1);
+  color: #5a7184;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.landing-download .download-card:hover {
+  background-color: #36b37e;
+  color: white;
+}
+.landing-download .download-card:hover a {
+  background-color: white;
+  color: #183b56;
+  border-color: white;
+  text-decoration: none;
+}
+.landing-download img {
+  margin-bottom: 48px;
+}
+.landing-download .title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.29;
+  letter-spacing: 0.2px;
+}
+.landing-download .desc {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+.landing-download a {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 45px;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 12px;
+  border: solid 2px #36b37e;
+  color: #36b37e;
+  font-weight: bold;
+}
+
+.landing-subscribe {
+  margin-bottom: 44px;
+}
+.landing-subscribe .container {
+  border-bottom: solid 1px #e3e7ed;
+  padding-top: 42px;
+  padding-bottom: 62px;
+}
+.landing-subscribe .title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  color: #183b56;
+}
+.landing-subscribe .desc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #5a7184;
+  margin-top: 8px;
+}
+.landing-subscribe .custom-form {
+  display: flex;
+  width: 497px;
+}
+.landing-subscribe input {
+  flex: auto;
+  border-radius: 8px;
+  box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+  border: solid 1px #e5eaf4;
+  border-right: none;
+  outline: none;
+  color: #5a7184;
+  padding-left: 24px;
+}
+.landing-subscribe button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 58px;
+  border-radius: 4px;
+  border: none;
+  background-color: #183b56;
+  color: white;
+  font-weight: bold;
+}
+.landing-subscribe .form-group {
+  width: 497px;
+  box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+}
+.landing-subscribe input:focus {
+  box-shadow: none;
+}
+.landing-subscribe .btn {
+  border-radius: 4px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body.landing .section-desc {
+    font-size: 16px;
+  }
+  header.landing .hero {
+    padding-top: 26px;
+    text-align: center;
+  }
+  header.landing .hero .container {
+    max-width: 622px;
+    padding: 0;
+  }
+  header.landing .hero .hero-title {
+    font-size: 48px;
+    padding: 0 116px;
+  }
+  header.landing .hero .section-desc {
+    margin-bottom: 50px;
+    padding: 0 60px;
+  }
+  header.landing .hero .btn-container {
+    justify-content: center;
+  }
+  header.landing .hero img {
+    margin-top: 72px;
+  }
+  .landing-partner {
+    padding: 72px 0;
+  }
+  .landing-partner .container {
+    max-width: 668px;
+    padding: 0;
+  }
+  .landing-partner .partner {
+    gap: 39px;
+  }
+  .landing-partner img {
+    width: 87px;
+  }
+  .landing-partner .dots {
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .landing-collab {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  .landing-collab .container {
+    max-width: 700px;
+    padding: 0;
+  }
+  .landing-collab .section-desc {
+    font-size: 18px !important;
+    width: 525px;
+  }
+  .landing-collab img.image {
+    margin-top: 22px;
+  }
+  .landing-collab .column-gap {
+    column-gap: 20px;
+  }
+  .landing-collab .collab-card {
+    width: 220px;
+    height: 235px;
+    border-radius: 8px;
+    border: solid 2px rgba(179, 186, 197, 0.1);
+    padding: 22px;
+    padding-right: 16px;
+    padding-left: 20px;
+    text-align: left;
+  }
+  .landing-collab .collab-card img {
+    width: 44px;
+  }
+  .landing-collab .collab-card .title {
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 9px;
+  }
+  .landing-collab .collab-card .desc {
+    font-size: 14px;
+  }
+  .landing-collab .gap {
+    gap: 56px;
+  }
+  .landing-collab .xl-w-544.gap {
+    gap: 50px;
+  }
+  .landing-collab div.image img {
+    width: 280px;
+    height: 331px;
+  }
+  .landing-review {
+    height: unset;
+    margin: 0;
+    border-radius: unset;
+    padding-top: 29px;
+    padding-bottom: 21px;
+  }
+  .landing-review .container {
+    max-width: 678px;
+    padding: 0;
+  }
+  .landing-review img {
+    width: 203px !important;
+    margin-right: 55px;
+  }
+  .landing-review .name {
+    font-size: 20px;
+  }
+  .landing-review .review {
+    font-size: 22px;
+    padding-right: 21px;
+  }
+  .landing-review .btn-container {
+    top: unset;
+    bottom: -46px;
+    left: 258px;
+  }
+  .landing-integration {
+    background-size: contain;
+    margin: 0;
+    margin-top: 115px;
+    margin-bottom: 80px;
+    padding-top: 54px;
+    padding-bottom: 35px;
+  }
+  .landing-integration .tagline {
+    font-size: 32px !important;
+  }
+  .landing-pricing {
+    height: 764px;
+    padding-top: 48px;
+  }
+  .landing-pricing .container {
+    max-width: 698px;
+    padding: 0;
+  }
+  .landing-pricing .tagline {
+    font-size: 32px !important;
+    margin-bottom: 20px;
+  }
+  .landing-pricing .cards {
+    row-gap: 18px;
+  }
+  .landing-pricing .pricing-card {
+    padding: 20px 30px;
+  }
+  .landing-pricing .title {
+    font-size: 20px;
+  }
+  .landing-pricing .desc {
+    font-size: 14px;
+  }
+  .landing-download {
+    margin-top: 130px;
+  }
+  .landing-download .container {
+    max-width: 708px;
+    padding: 0;
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+  .landing-download .tagline {
+    font-size: 32px !important;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  .landing-download a {
+    padding: 13px 24px;
+  }
+  .landing-download .download-card {
+    width: 236px;
+    height: fit-content;
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+  .landing-download img {
+    margin-bottom: 46px;
+  }
+  .landing-download .title {
+    font-size: 22px;
+  }
+  .landing-download .desc {
+    font-size: 14px;
+    padding: 0 32px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .landing-subscribe {
+    text-align: center;
+  }
+  .landing-subscribe .container {
+    max-width: 497px;
+    padding: 40px 0;
+    border: none;
+  }
+  .landing-subscribe .desc {
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body.landing .section-desc {
+    font-size: 16px;
+  }
+  header.landing .hero {
+    padding-top: 26px;
+    text-align: center;
+  }
+  header.landing .hero .container {
+    max-width: 622px;
+    padding: 0 !important;
+  }
+  header.landing .hero .hero-title {
+    font-size: 48px;
+    padding: 0 116px;
+  }
+  header.landing .hero .section-desc {
+    margin-bottom: 50px;
+    padding: 0 60px;
+  }
+  header.landing .hero .btn-container {
+    justify-content: center;
+  }
+  header.landing .hero img {
+    margin-top: 72px;
+  }
+  .landing-partner {
+    padding: 72px 0;
+  }
+  .landing-partner .container {
+    max-width: 668px;
+    padding: 0 !important;
+  }
+  .landing-partner .partner {
+    gap: 39px;
+  }
+  .landing-partner img {
+    width: 87px;
+  }
+  .landing-partner .dots {
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .landing-collab {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  .landing-collab .container {
+    max-width: 700px !important;
+    padding: 0;
+  }
+  .landing-collab .section-desc {
+    font-size: 18px !important;
+    width: 525px;
+  }
+  .landing-collab img.image {
+    margin-top: 22px;
+  }
+  .landing-collab .column-gap {
+    column-gap: 20px;
+  }
+  .landing-collab .collab-card {
+    width: 220px;
+    height: 235px;
+    border-radius: 8px;
+    border: solid 2px rgba(179, 186, 197, 0.1);
+    padding: 22px;
+    padding-right: 16px;
+    padding-left: 20px;
+    text-align: left;
+  }
+  .landing-collab .collab-card img {
+    width: 44px;
+  }
+  .landing-collab .collab-card .title {
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 9px;
+  }
+  .landing-collab .collab-card .desc {
+    font-size: 14px;
+  }
+  .landing-collab .gap {
+    gap: 56px;
+  }
+  .landing-collab .xl-w-544.gap {
+    gap: 50px;
+  }
+  .landing-collab div.image img {
+    width: 280px;
+    height: 331px;
+  }
+  .landing-review {
+    height: unset;
+    margin: 0;
+    border-radius: unset;
+    padding-top: 29px;
+    padding-bottom: 21px;
+  }
+  .landing-review .container {
+    max-width: 678px;
+    padding: 0 !important;
+  }
+  .landing-review img {
+    width: 203px !important;
+    margin-right: 55px;
+  }
+  .landing-review .name {
+    font-size: 20px;
+  }
+  .landing-review .review {
+    font-size: 22px;
+    padding-right: 21px;
+  }
+  .landing-review .btn-container {
+    top: unset;
+    bottom: -46px;
+    left: 258px;
+  }
+  .landing-integration {
+    background-size: contain;
+    margin: 0;
+    margin-top: 115px;
+    margin-bottom: 80px;
+    padding-top: 54px;
+    padding-bottom: 35px;
+  }
+  .landing-integration .tagline {
+    font-size: 32px !important;
+  }
+  .landing-pricing {
+    height: 764px;
+    padding-top: 48px;
+  }
+  .landing-pricing .container {
+    max-width: 698px;
+    padding: 0 !important;
+  }
+  .landing-pricing .tagline {
+    font-size: 32px !important;
+    margin-bottom: 20px;
+  }
+  .landing-pricing .cards {
+    row-gap: 18px;
+  }
+  .landing-pricing .pricing-card {
+    padding: 20px 30px;
+  }
+  .landing-pricing .title {
+    font-size: 20px;
+  }
+  .landing-pricing .desc {
+    font-size: 14px;
+  }
+  .landing-download {
+    margin-top: 130px;
+  }
+  .landing-download .container {
+    max-width: 708px !important;
+    padding: 0;
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+  .landing-download .tagline {
+    font-size: 32px !important;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  .landing-download a {
+    padding: 13px 24px;
+  }
+  .landing-download .download-card {
+    width: 236px;
+    height: fit-content;
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+  .landing-download img {
+    margin-bottom: 46px;
+  }
+  .landing-download .title {
+    font-size: 22px;
+  }
+  .landing-download .desc {
+    font-size: 14px;
+    padding: 0 32px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .landing-subscribe {
+    text-align: center;
+  }
+  .landing-subscribe .container {
+    max-width: 497px !important;
+    padding: 40px 0;
+    border: none;
+  }
+  .landing-subscribe .desc {
+    margin-bottom: 36px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body.landing .section-desc {
+    font-size: 16px;
+  }
+  header.landing .hero {
+    padding-top: 26px;
+    text-align: center;
+  }
+  header.landing .hero .container {
+    max-width: 576px;
+    padding: 0 !important;
+  }
+  header.landing .hero .hero-title {
+    font-size: 48px;
+    padding: 0 93px;
+  }
+  header.landing .hero .section-desc {
+    margin-bottom: 50px;
+    padding: 0 37px;
+  }
+  header.landing .hero .btn-container {
+    justify-content: center;
+  }
+  header.landing .hero img {
+    margin-top: 72px;
+  }
+  .landing-partner {
+    padding: 72px 0;
+  }
+  .landing-partner .container {
+    max-width: 516pxpx;
+    padding: 0 !important;
+  }
+  .landing-partner .partner {
+    gap: 30px;
+  }
+  .landing-partner img {
+    width: 79.2px;
+  }
+  .landing-partner .dots {
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .landing-collab {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  .landing-collab .container {
+    max-width: 576px !important;
+    padding: 0;
+  }
+  .landing-collab .section-desc {
+    font-size: 18px !important;
+    width: 525px;
+  }
+  .landing-collab img.image {
+    width: 556px;
+    margin-top: 22px;
+  }
+  .landing-collab .column-gap {
+    column-gap: 20px;
+  }
+  .landing-collab .collab-card {
+    width: 165.3333333333px;
+    height: fit-content;
+    border-radius: 8px;
+    border: solid 2px rgba(179, 186, 197, 0.1);
+    padding: 15px 15px 16px;
+    text-align: left;
+  }
+  .landing-collab .collab-card img {
+    width: 44px;
+  }
+  .landing-collab .collab-card .title {
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 9px;
+  }
+  .landing-collab .collab-card .desc {
+    font-size: 14px;
+  }
+  .landing-collab .gap {
+    gap: 56px;
+  }
+  .landing-collab .xl-w-544.gap {
+    gap: 30px;
+  }
+  .landing-collab div.image img {
+    width: 240px;
+    height: auto;
+  }
+  .landing-review {
+    height: unset;
+    margin: 0;
+    border-radius: unset;
+    padding-top: 29px;
+    padding-bottom: 21px;
+  }
+  .landing-review .container {
+    max-width: 556px;
+    padding: 0 !important;
+  }
+  .landing-review img {
+    width: 203px !important;
+    margin-right: 55px;
+  }
+  .landing-review .name {
+    font-size: 20px;
+  }
+  .landing-review .review {
+    font-size: 22px;
+    padding-right: 0;
+  }
+  .landing-review .btn-container {
+    top: unset;
+    bottom: -46px;
+    left: 258px;
+  }
+  .landing-integration {
+    background-size: contain;
+    background-position: -100px center, 450px center;
+    margin: 0;
+    margin-top: 115px;
+    margin-bottom: 80px;
+    padding-top: 54px;
+    padding-bottom: 35px;
+  }
+  .landing-integration .tagline {
+    font-size: 32px !important;
+  }
+  .landing-pricing {
+    height: 832px;
+    padding-top: 48px;
+  }
+  .landing-pricing .container {
+    max-width: 556px;
+    padding: 0 !important;
+  }
+  .landing-pricing .text-container {
+    width: unset;
+  }
+  .landing-pricing .tagline {
+    font-size: 32px !important;
+    margin-bottom: 20px;
+  }
+  .landing-pricing .cards {
+    row-gap: 18px;
+  }
+  .landing-pricing .pricing-card {
+    padding: 20px;
+  }
+  .landing-pricing .title {
+    font-size: 20px;
+  }
+  .landing-pricing .desc {
+    font-size: 14px;
+  }
+  .landing-pricing .underline {
+    font-size: 14px;
+  }
+  .landing-download {
+    margin-top: 130px;
+  }
+  .landing-download .container {
+    max-width: 576px !important;
+    padding: 0;
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+  .landing-download .tagline {
+    font-size: 32px !important;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  .landing-download a {
+    padding: 13px 24px;
+  }
+  .landing-download .download-card {
+    width: 192px;
+    height: fit-content;
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+  .landing-download img {
+    margin-bottom: 46px;
+  }
+  .landing-download .title {
+    font-size: 22px;
+  }
+  .landing-download .desc {
+    font-size: 14px;
+    padding: 0 32px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .landing-subscribe {
+    text-align: center;
+  }
+  .landing-subscribe .container {
+    max-width: 497px !important;
+    padding: 40px 0;
+    border: none;
+  }
+  .landing-subscribe .desc {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 575.98px) {
+  body.landing #bp_mobile {
+    display: block;
+  }
+  body.landing .tagline {
+    font-size: 28px;
+  }
+  body.landing .section-desc {
+    font-size: 16px;
+  }
+  header.landing .hero {
+    padding-top: 32px;
+    text-align: center;
+  }
+  header.landing .hero .container {
+    max-width: 300px;
+    padding: 0;
+  }
+  header.landing .hero .hero-title {
+    font-size: 32px;
+  }
+  header.landing .hero .section-desc {
+    font-size: 16px;
+    padding: 0 17px;
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+  header.landing .hero .btn-container {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 16px;
+  }
+  header.landing .hero a {
+    height: 48px;
+    padding: 0;
+    font-size: 16px;
+  }
+  header.landing .hero img {
+    margin-top: 36px;
+  }
+  .landing-partner {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  .landing-partner .container {
+    max-width: 268px;
+    padding: 0;
+  }
+  .landing-partner .partner {
+    flex-wrap: wrap;
+    column-gap: 34px;
+    row-gap: 24px;
+    width: 226px;
+    margin: auto;
+    margin-bottom: 36px;
+  }
+  .landing-partner img {
+    width: 96px;
+  }
+  .landing-partner .dots {
+    height: 21px;
+    width: 268px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .landing-collab {
+    text-align: center;
+  }
+  .landing-collab .container {
+    max-width: 320px;
+    padding: 0;
+  }
+  .landing-collab .section-desc {
+    width: 272px;
+    margin-bottom: 24px;
+  }
+  .landing-collab .tagline {
+    margin-top: 22px;
+    margin-bottom: 15px;
+  }
+  .landing-collab img.image {
+    width: 320px;
+    padding: 19px 20px 14px 17px;
+    margin-top: 30px;
+  }
+  .landing-collab .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+  .landing-collab .owl-carousel .owl-item {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .landing-collab .owl-carousel .owl-item.active {
+    opacity: 1;
+  }
+  .landing-collab .collab-card {
+    width: 280px;
+    height: 179px;
+    box-shadow: 0 26px 40px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    padding: 15px 15px 16px;
+    text-align: left;
+  }
+  .landing-collab .collab-card img {
+    width: 36px !important;
+  }
+  .landing-collab .collab-card .title {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .landing-collab .collab-card .desc {
+    width: unset;
+  }
+  .landing-collab .desc {
+    font-size: 14px;
+    width: 260px;
+  }
+  .landing-collab .xl-w-544.gap {
+    gap: 26px;
+  }
+  .landing-collab div.image img {
+    width: 280px;
+    height: auto;
+  }
+  .landing-collab .title {
+    font-size: 18px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .landing-review {
+    height: unset;
+    text-align: center;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    padding-bottom: 46px;
+  }
+  .landing-review .container {
+    max-width: 280px;
+    padding: 0;
+  }
+  .landing-review img {
+    width: 200px !important;
+    margin: auto;
+    margin-top: -78px;
+  }
+  .landing-review .name {
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .landing-review .job {
+    font-size: 14px;
+  }
+  .landing-review .review {
+    font-size: 20px;
+  }
+  .landing-review .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+  .landing-review .owl-carousel .owl-item {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .landing-review .owl-carousel .owl-item.active {
+    opacity: 1;
+  }
+  .landing-review .btn-container {
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .landing-review .owl-dots {
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .landing-integration {
+    text-align: center;
+    background: none;
+    margin: 0;
+    padding-top: 56;
+    padding-bottom: 64px;
+  }
+  .landing-integration .container {
+    max-width: 320px;
+    padding: 0;
+  }
+  .landing-integration .text-container {
+    width: 272px;
+  }
+  .landing-integration .tagline {
+    margin-top: 16px;
+  }
+  .landing-integration img {
+    width: 320px;
+  }
+  .landing-pricing {
+    height: 1227px;
+    padding-top: 48px;
+  }
+  .landing-pricing .container {
+    max-width: 280px;
+    padding: 0;
+  }
+  .landing-pricing .text-container {
+    width: unset;
+  }
+  .landing-pricing .tagline {
+    margin-top: 22px;
+    margin-bottom: 12px;
+  }
+  .landing-pricing .switch {
+    margin: 0 14px;
+  }
+  .landing-pricing .cards {
+    row-gap: 18px;
+  }
+  .landing-pricing .pricing-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .landing-pricing .desc {
+    font-size: 14px;
+  }
+  .landing-pricing .title {
+    margin-bottom: 0;
+  }
+  .landing-pricing .underline {
+    font-size: 12px;
+  }
+  .landing-pricing .xs-py-10 {
+    padding: 10px 0;
+  }
+  .landing-download {
+    margin-top: 169px;
+  }
+  .landing-download .container {
+    max-width: 280px;
+    padding: 0;
+    padding-top: 46px;
+  }
+  .landing-download .tagline {
+    font-size: 28px !important;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  .landing-download .flex {
+    gap: 20px;
+  }
+  .landing-download .download-card {
+    width: 280px;
+    height: fit-content;
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  .landing-download img {
+    margin-bottom: 24px;
+  }
+  .landing-download .title {
+    font-size: 22px;
+  }
+  .landing-download .desc {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+  .landing-download a {
+    width: 235px;
+    height: 48px;
+    padding: 0;
+  }
+  .landing-subscribe {
+    text-align: center;
+    padding-top: 72px;
+    margin-bottom: 0;
+  }
+  .landing-subscribe .container {
+    max-width: 280px;
+    padding: 0;
+    padding-bottom: 36px;
+  }
+  .landing-subscribe .desc {
+    font-size: 14px;
+    margin-top: 14px;
+  }
+  .landing-subscribe .custom-form {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 12px 8px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 -10px 35px 0 rgba(0, 0, 0, 0.03);
+  }
+  .landing-subscribe input {
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-right: solid 1px #e5eaf4;
+    height: 40px;
+    padding: 0;
+    padding-left: 16px;
+  }
+  .landing-subscribe button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+  }
+}
+.bp_checking {
+  display: none;
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  body.landing #bp_tablet {
+    display: block;
+  }
+}

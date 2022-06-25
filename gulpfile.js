@@ -11,9 +11,9 @@ const htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('scss', () => {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./scss/build/'));
+        .pipe(gulp.dest('./src/scss/build/'));
 });
 
 // prettify html files
@@ -25,8 +25,8 @@ gulp.task('templates', () => {
 
 // Concat and minify CSS files
 gulp.task('build-css', () => {
-    return gulp.src(['scss/build/*.css', 
-                     'scss/build/**/*.css'])
+    return gulp.src(['src/scss/build/*.css', 
+                     'src/scss/build/**/*.css'])
     .pipe(concat('main.css'))
     .pipe(cleanCss())
     .pipe(gulp.dest('dist/css'));
@@ -58,7 +58,7 @@ gulp.task('svg', () => {
 
 // fonts
 gulp.task('font', () => {
-    return gulp.src('src/fonts/*.*')
+    return gulp.src('src/scss/fonts/*.*')
 	       	.pipe(gulp.dest('dist/fonts'));
 });
 
