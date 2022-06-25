@@ -8,7 +8,9 @@ const imagemin = require('gulp-imagemin');
 const svgo = require('gulp-svgo');
 const htmlmin = require('gulp-htmlmin');
 
+const serve = require('gulp-serve');
 
+gulp.task('serve', serve('dist'));
 
 gulp.task('scss', () => {
     return gulp.src('src/scss/main.scss')

@@ -10,15 +10,15 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 git clone https://github.com/jamalelkhdadi/test-project-for-frontend-developer.git
 cd test-project-for-frontend-developer
 npm install
-npm start
+gulp serve
 ```
 
-Your app should now be running on [localhost:8080](http://localhost:8080/).
+Your app should now be running on [127.0.0.1:3000](http://127.0.0.1:3000/).
 
 ## live project
 
 ```
-https://ehyaware.herokuapp.com
+https://ehyaware.netlify.app
 ```
 
 ## Build
