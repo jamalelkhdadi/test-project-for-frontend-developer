@@ -25,8 +25,8 @@ gulp.task('templates', () => {
 
 // Concat and minify CSS files
 gulp.task('build-css', () => {
-    return gulp.src('src/css/main.css')
-    //.pipe(concat('main.css'))
+    return gulp.src('src/css/*.css')
+    .pipe(concat('main.css'))
     .pipe(cleanCss())
     .pipe(gulp.dest('dist/css'));
 });
