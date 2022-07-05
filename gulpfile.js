@@ -1,120 +1,115 @@
 const gulp = require('gulp');
+const prettify = require('gulp-html-prettify');
+const htmlmin = require('gulp-htmlmin');
+const sass = require('gulp-sass')(require('sass'));
+const cssbeautify = require('gulp-cssbeautify');
 const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const prettify = require('gulp-html-prettify');
-const sass = require('gulp-sass')(require('sass'));
-const imagemin = require('gulp-imagemin');
 const svgo = require('gulp-svgo');
-const htmlmin = require('gulp-htmlmin');
-
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
 const serve = require('gulp-serve');
 
-const cssbeautify = require('gulp-cssbeautify');
-
-
-/*
-gulp.task('css', function() {
-    return gulp.src('./assets/css/*.css')
-        .pipe(cssbeautify({
-            indent: '    ',
-            //openbrace: 'separate-line',
-            autosemicolon: true
-        }))
-        .pipe(gulp.dest('./assets/dist/css'));
-});
-*/
-
-
-
-gulp.task('serve', serve('dist'));
-
-gulp.task('scss', () => {
-    return gulp.src('src/scss/main.scss')
-        //gulp.src('src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/scss/build/'));
-});
 
 // prettify html files
-gulp.task('templates', () => {
-  return gulp.src('src/*.html')
+gulp.task('html-prettify', () => {
+   return gulp.src('src/*.html')
     .pipe(prettify({indent_char: ' ', indent_size: 4}))
+    .pipe(gulp.dest('./build/'));
+});
+
+// minify html files
+gulp.task('html-minify', () => {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin())
     .pipe(gulp.dest('./dist/'));
 });
 
+// sass to css
+gulp.task('scss-build', () => {
+  return gulp.src('src/scss/main.scss')
+    //gulp.src('src/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./build/css/'));
+});
+
+// prettify css files
+gulp.task('css-prettify', () => {
+  return gulp.src('./build/css/*.css')
+    .pipe(cssbeautify({
+      indent: '    ',
+      //openbrace: 'separate-line',
+      autosemicolon: true
+    }))
+    .pipe(gulp.dest('./build/css'));
+});
+
 // Concat and minify CSS files
-gulp.task('build-css', () => {
-    return gulp.src('src/scss/build/main.css')
+gulp.task('css-minify', () => {
+  return gulp.src('./build/css/*.css')
     .pipe(concat('main.css'))
     .pipe(cleanCss())
-    .pipe(gulp.dest('dist/css'));
-});
-
-// copy bootstrap from node_modules
-gulp.task('bootstrap-css', () => {
-    return gulp.src('src/css/bootstrap.min.css')
-        .pipe(gulp.dest('dist/css'));
-});
-gulp.task('bootstrap-js', () => {
-    return gulp.src('src/js/bootstrap.bundle.min.js')
-        .pipe(gulp.dest('dist/js'));
-});
-
-// images
-gulp.task('img', () => {
-    return gulp.src('src/img/*.png')
-        .pipe(imagemin())
-	       	.pipe(gulp.dest('dist/img'));
-});
-
-// svg
-gulp.task('svg', () => {
-    return gulp.src('src/img/*.svg')
-        .pipe(svgo())
-        .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('./dist/css'));
 });
 
 // fonts
 gulp.task('font', () => {
-    return gulp.src('src/scss/fonts/*.*')
-	       	.pipe(gulp.dest('dist/fonts'));
+  return gulp.src('src/fonts/*.*')
+    .pipe(gulp.dest('dist/fonts'));
 });
 
+// svg
+gulp.task('svg', () => {
+  return gulp.src('src/img/*.svg')
+    .pipe(svgo())
+    .pipe(gulp.dest('dist/img'));
+});
 
-gulp.task('build', gulp.series(
-  'scss',
-  'templates',
-  'build-css',
-  'bootstrap-css',
-  'bootstrap-js',
-  'img',
-  'svg',
-  'font'
-));
+// images png
+gulp.task('imgs-png', () => {
+  return gulp.src('src/img/*.png')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'));
+});
+
+// copy bootstrap from node_modules
+gulp.task('bootstrap-css', () => {
+    return gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+        .pipe(gulp.dest('dist/css'));
+});
+gulp.task('bootstrap-js', () => {
+    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+        .pipe(gulp.dest('dist/js'));
+});
+
 
 
 
 /*
 // Concat and minify specific JS files
-gulp.task('build-js', () => {
-    return gulp.src(['src/js/ajax.js', 
-                     'src/js/main.js'])
-        .pipe(concat('app.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('min-html', () => {
-  return gulp.src('src/*.html')
-    .pipe(htmlmin())
-    .pipe(gulp.dest('dist'));
+gulp.task('js-build', () => {
+  return gulp.src(['src/js/script.js', 'src/js/main.js'])
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
 });
 */
 
 
-gulp.task('html-pri', () => {
-  return gulp.src('index.html')
-    .pipe(prettify({indent_char: ' ', indent_size: 4}))
-    .pipe(gulp.dest('./'));
-});
+
+// run dist localy
+gulp.task('serve', serve('dist'));
+
+// build project
+gulp.task('build', gulp.series(
+  'html-prettify',
+  'html-minify',
+  'scss-build',
+  'css-prettify',
+  'css-minify',
+  'font',
+  'svg',
+  'imgs-png',
+  'bootstrap-css',
+  'bootstrap-js'
+));
