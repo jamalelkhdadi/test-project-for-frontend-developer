@@ -10,6 +10,23 @@ const htmlmin = require('gulp-htmlmin');
 
 const serve = require('gulp-serve');
 
+const cssbeautify = require('gulp-cssbeautify');
+
+
+/*
+gulp.task('css', function() {
+    return gulp.src('./assets/css/*.css')
+        .pipe(cssbeautify({
+            indent: '    ',
+            //openbrace: 'separate-line',
+            autosemicolon: true
+        }))
+        .pipe(gulp.dest('./assets/dist/css'));
+});
+*/
+
+
+
 gulp.task('serve', serve('dist'));
 
 gulp.task('scss', () => {
@@ -64,7 +81,17 @@ gulp.task('font', () => {
 	       	.pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('build', gulp.series('scss', 'templates', 'build-css', 'bootstrap-css', 'bootstrap-js', 'img', 'svg', 'font'));
+
+gulp.task('build', gulp.series(
+  'scss',
+  'templates',
+  'build-css',
+  'bootstrap-css',
+  'bootstrap-js',
+  'img',
+  'svg',
+  'font'
+));
 
 
 
@@ -84,3 +111,10 @@ gulp.task('min-html', () => {
     .pipe(gulp.dest('dist'));
 });
 */
+
+
+gulp.task('html-pri', () => {
+  return gulp.src('index.html')
+    .pipe(prettify({indent_char: ' ', indent_size: 4}))
+    .pipe(gulp.dest('./'));
+});
