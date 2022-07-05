@@ -33,6 +33,18 @@ gulp.task('scss-build', () => {
     .pipe(gulp.dest('./build/css/'));
 });
 
+// font to css require
+gulp.task('font-to-css', () => {
+  return gulp.src('src/fonts/*.*')
+    .pipe(gulp.dest('./build/fonts'));
+});
+
+// fonts
+gulp.task('font', () => {
+  return gulp.src('src/fonts/*.*')
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
 // prettify css files
 gulp.task('css-prettify', () => {
   return gulp.src('./build/css/*.css')
@@ -52,34 +64,28 @@ gulp.task('css-minify', () => {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// fonts
-gulp.task('font', () => {
-  return gulp.src('src/fonts/*.*')
-    .pipe(gulp.dest('dist/fonts'));
-});
-
 // svg
 gulp.task('svg', () => {
   return gulp.src('src/img/*.svg')
     .pipe(svgo())
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('./dist/img'));
 });
 
 // images png
 gulp.task('imgs-png', () => {
   return gulp.src('src/img/*.png')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('./dist/img'));
 });
 
 // copy bootstrap from node_modules
 gulp.task('bootstrap-css', () => {
     return gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 gulp.task('bootstrap-js', () => {
     return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('./dist/js'));
 });
 
 
@@ -91,7 +97,7 @@ gulp.task('js-build', () => {
   return gulp.src(['src/js/script.js', 'src/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('./dist/js'));
 });
 */
 
@@ -104,10 +110,11 @@ gulp.task('serve', serve('dist'));
 gulp.task('build', gulp.series(
   'html-prettify',
   'html-minify',
+  'font-to-css',
+  'font',
   'scss-build',
   'css-prettify',
   'css-minify',
-  'font',
   'svg',
   'imgs-png',
   'bootstrap-css',
